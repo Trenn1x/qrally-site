@@ -5,101 +5,155 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>QRally – Build Your Brand, One Scan at a Time</title>
 
-  <!-- Tailwind via CDN -->
+  <!--  Tailwind  -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: '#4f46e5',          // indigo-600
+            accent:  '#facc15',          // yellow-400
+            blurple: { from:'#6366f1', via:'#8b5cf6', to:'#ec4899' }
+          }
+        }
+      }
+    }
+  </script>
+  <!--  Inter font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
+  <!--  Tiny fade-in util  -->
   <style>
-    .input{ @apply w-full border rounded-md p-3 }
-    .btn-primary{ @apply bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition }
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+    .fade-up{opacity:0;animation:fadeUp 0.7s ease-out 0.2s forwards}
   </style>
 </head>
 
-<body class="font-sans text-gray-800 leading-relaxed">
+<body class="font-sans text-gray-800 leading-relaxed antialiased bg-white">
 
-<!-- HERO -------------------------------------------------------------->
-<section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-700 text-white text-center px-6">
-  <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg">
-    QRally<br><span class="text-yellow-300">Build Your Brand, One Scan at a Time</span>
-  </h1>
-  <p class="text-xl max-w-2xl">A fresh, human-first ecosystem for out-of-home advertising.</p>
-  <a href="#join" class="btn-primary mt-10">Join the Movement</a>
+<!-- HERO -->
+<header class="relative isolate">
+  <!-- gradient bg -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-blurple-from via-blurple-via to-blurple-to"></div>
+
+  <div class="min-h-screen flex flex-col items-center justify-center text-white text-center px-6">
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold drop-shadow-md fade-up">
+      QRally
+      <span class="block text-accent">Build Your Brand, One Scan at a Time</span>
+    </h1>
+    <p class="text-xl sm:text-2xl max-w-2xl mt-6 fade-up">
+      A fresh, human-first ecosystem for out-of-home advertising.
+    </p>
+    <a href="#join" class="btn-primary mt-10 fade-up inline-block">
+      Join the Movement
+    </a>
+  </div>
+
+  <!-- wave separator -->
+  <svg class="absolute bottom-0 w-full" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M0,32L60,26.7C120,21,240,11,360,16C480,21,600,43,720,58.7C840,75,960,85,1080,64C1200,43,1320,0,1380,-16L1440,-32L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z"/></svg>
+</header>
+
+<!-- MISSION -->
+<section class="py-20 px-6 max-w-5xl mx-auto fade-up">
+  <h2 class="text-3xl font-semibold mb-6 text-primary">Mission</h2>
+  <p class="text-lg">
+    Fuse local businesses and everyday drivers into a grassroots ad-network that grows community commerce and extra driver income.
+  </p>
 </section>
 
-<!-- MISSION ----------------------------------------------------------->
-<section class="py-16 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-semibold mb-6">Mission</h2>
-  <p>Fuse local businesses and everyday drivers into a grassroots ad-network that grows community commerce and extra driver income.</p>
-</section>
-
-<!-- PROBLEM & GAP ----------------------------------------------------->
-<section class="bg-gray-50 py-16 px-6">
-  <h2 class="text-3xl font-semibold mb-6 text-center">Problem &amp; Market Gap</h2>
-  <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-    <div>
-      <h3 class="font-medium text-xl mb-2">Market Pain</h3>
-      <ul class="list-disc list-inside space-y-2">
-        <li>SMBs crave affordable, hyper-local reach; digital CPMs &amp; CAC keep rising.</li>
-        <li>Traditional OOH is static, pricey, and data-poor.</li>
-        <li>Flyers feel dated; car wraps are permanent.</li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="font-medium text-xl mb-2">Gap We Fill</h3>
-      <p>Friction-free, measurable, design-flexible vehicle/window ads anyone can launch in minutes.</p>
-      <p class="mt-4"><strong>Addressable market:</strong> 1.4 B cars × $25 avg annual QR spend ⇒ $35 B.</p>
+<!-- PROBLEM & GAP -->
+<section class="bg-gray-50 py-20 px-6">
+  <div class="max-w-5xl mx-auto fade-up">
+    <h2 class="text-3xl font-semibold mb-10 text-center text-primary">Problem &amp; Market Gap</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+          <!-- exclamation icon -->
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg>
+          Market Pain
+        </h3>
+        <ul class="list-disc list-inside space-y-2 text-lg">
+          <li>SMBs crave affordable, hyper-local reach; digital CPMs &amp; CAC keep rising.</li>
+          <li>Traditional OOH is static, pricey, and data-poor.</li>
+          <li>Flyers feel dated; car wraps are permanent.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+          <!-- sparkles icon -->
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 01.894.553l1.618 3.275 3.619.525a1 1 0 01.554 1.705l-2.618 2.553.618 3.603a1 1 0 01-1.451 1.054L10 13.447l-3.236 1.702a1 1 0 01-1.451-1.054l.619-3.603-2.619-2.553a1 1 0 01.554-1.705l3.619-.525L9.106 2.553A1 1 0 0110 2z"/></svg>
+          Gap We Fill
+        </h3>
+        <p class="text-lg mb-4">Friction-free, measurable, design-flexible vehicle/window ads anyone can launch in minutes.</p>
+        <p class="font-semibold">Addressable market: 1.4 B cars × $25 avg annual QR spend ⇒ $35 B.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS ------------------------------------------------------>
-<section class="py-16 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-semibold mb-10 text-center">How QRally Works</h2>
-  <div class="grid md:grid-cols-3 gap-10 text-center">
-    <div>
-      <h3 class="text-xl font-medium mb-2">1. Peel-&amp;-Place QR Skins</h3>
+<!-- HOW IT WORKS -->
+<section class="py-20 px-6 max-w-6xl mx-auto fade-up">
+  <h2 class="text-3xl font-semibold mb-12 text-center text-primary">How QRally Works</h2>
+  <div class="grid md:grid-cols-3 gap-12">
+    <!-- card -->
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <svg class="w-8 h-8 text-accent mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8V6a5 5 0 00-10 0v2a2 2 0 01-2 2H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2h-1a2 2 0 01-2-2z"/></svg>
+      <h3 class="text-xl font-semibold mb-2">1. Peel-&amp;-Place QR Skins</h3>
       <p>Minimal text, bold colour blocks; swap in &lt;30 s.</p>
     </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">2. Lite Driver Profile</h3>
+    <!-- card -->
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <svg class="w-8 h-8 text-accent mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 21a3 3 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <h3 class="text-xl font-semibold mb-2">2. Lite Driver Profile</h3>
       <p>Interests &amp; causes influence decal style; social feed shows scans, perks, high-fives.</p>
     </div>
-    <div>
-      <h3 class="text-xl font-medium mb-2">3. Scan Incentives</h3>
+    <!-- card -->
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <svg class="w-8 h-8 text-accent mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      <h3 class="text-xl font-semibold mb-2">3. Scan Incentives</h3>
       <p>Each scan can unlock discounts, giveaways, loyalty points.</p>
     </div>
   </div>
 </section>
 
-<!-- GO-TO-MARKET ------------------------------------------------------>
-<section class="bg-gray-50 py-16 px-6">
-  <h2 class="text-3xl font-semibold mb-6 text-center">Grass-Roots Go-to-Market (0–6 mo)</h2>
-  <ul class="max-w-3xl mx-auto list-disc list-inside space-y-2">
-    <li>Cold-call sprint — 25 dials/rep/day targeting 1 000 SMBs.</li>
-    <li>Free sign-up + decal kit + $50 ad credit for first 100 merchants.</li>
-    <li>Driver magnet — $0.10/scan base + PulsePredict™ surge bonuses.</li>
-    <li>Street-festival demo fleet — QR-wrapped cars offer discounts &amp; live analytics.</li>
-  </ul>
+<!-- GO-TO-MARKET -->
+<section class="bg-gray-50 py-20 px-6 fade-up">
+  <h2 class="text-3xl font-semibold mb-10 text-center text-primary">Grass-Roots Go-to-Market (0–6 mo)</h2>
+  <div class="max-w-3xl mx-auto space-y-4 text-lg">
+    <p>• Cold-call sprint — 25 dials/rep/day targeting 1 000 SMBs.</p>
+    <p>• Free sign-up &amp; decal kit + $50 ad credit for first 100 merchants.</p>
+    <p>• Driver magnet — $0.10/scan base + PulsePredict™ surge bonuses.</p>
+    <p>• Street-festival demo fleet — QR-wrapped cars offer discounts &amp; live analytics.</p>
+  </div>
 </section>
 
-<!-- CAPITAL PLAN ------------------------------------------------------>
-<section class="py-16 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-semibold mb-6 text-center">Roadmap &amp; Capital Plan</h2>
-  <p class="text-center mb-8">
+<!-- CAPITAL PLAN -->
+<section class="py-20 px-6 max-w-5xl mx-auto fade-up">
+  <h2 class="text-3xl font-semibold mb-6 text-center text-primary">Roadmap &amp; Capital Plan</h2>
+  <p class="text-center text-lg">
     Pre-Seed $1.5 M SAFE → Seed $3.5 M → Series A $5 M.<br>
     35 % Product &amp; ML, 25 % Ops &amp; Inventory, 20 % Sales &amp; Marketing, 12 % Compliance, 8 % Cushion.
   </p>
 </section>
 
-<!-- JOIN THE MOVEMENT ------------------------------------------------->
-<section id="join" class="bg-blue-700 text-white py-16 px-6 text-center">
-  <h2 class="text-3xl font-semibold mb-4">Join the Movement</h2>
-  <p class="max-w-2xl mx-auto">QRally turns untapped daily traffic into a living marketplace that lifts neighbourhoods and rewards everyone involved.</p>
-  <p class="mt-4">We’re looking for investors, pilot merchants, and driver-ambassadors.</p>
-  <a href="mailto:hello@qrally.ai" class="btn-primary mt-8 inline-block">Email Us</a>
+<!-- JOIN -->
+<section id="join" class="relative">
+  <!-- top wave -->
+  <svg class="absolute -top-1 w-full rotate-180" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path fill="#4f46e5" d="M0,32L60,26.7C120,21,240,11,360,16C480,21,600,43,720,58.7C840,75,960,85,1080,64C1200,43,1320,0,1380,-16L1440,-32L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z"/></svg>
+
+  <div class="bg-primary text-white text-center py-20 px-6 relative">
+    <h2 class="text-3xl font-semibold mb-4">Join the Movement</h2>
+    <p class="max-w-2xl mx-auto">QRally turns untapped daily traffic into a living marketplace that lifts neighbourhoods and rewards everyone involved.</p>
+    <p class="mt-4">We’re looking for investors, pilot merchants, and driver-ambassadors.</p>
+    <a href="mailto:hello@qrally.ai" class="btn-primary bg-accent text-gray-900 mt-8 inline-block">Email Us</a>
+  </div>
 </section>
 
 <footer class="bg-gray-900 text-gray-300 text-center py-6">
-  &copy; 2025 QRally · Charleston&nbsp;SC
+  &copy; 2025&nbsp;QRally · Charleston&nbsp;SC
 </footer>
 
 </body>
