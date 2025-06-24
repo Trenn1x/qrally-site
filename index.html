@@ -5,118 +5,103 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>QRally – Build Your Brand, One Scan at a Time</title>
 
-  <!-- Tailwind (CDN) -->
+  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Quick utility classes for inputs/buttons if you add a form later -->
   <style>
-    .input       { @apply w-full border rounded-md p-3 }
-    .btn-primary { @apply bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition }
+    .input{ @apply w-full border rounded-md p-3 }
+    .btn-primary{ @apply bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition }
   </style>
 </head>
 
 <body class="font-sans text-gray-800 leading-relaxed">
 
-  <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-700 text-white text-center px-6">
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg">
-      QRally<br><span class="text-yellow-300">Build Your Brand, One Scan at a Time</span>
-    </h1>
-    <p class="text-xl max-w-2xl">
-      “A fresh, human-first ecosystem for out-of-home advertising.” :contentReference[oaicite:19]{index=19}
-    </p>
-    <a href="#join" class="btn-primary mt-10">Join the Movement</a>
-  </section>
+<!-- HERO -------------------------------------------------------------->
+<section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-700 via-indigo-700 to-purple-700 text-white text-center px-6">
+  <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 drop-shadow-lg">
+    QRally<br><span class="text-yellow-300">Build Your Brand, One Scan at a Time</span>
+  </h1>
+  <p class="text-xl max-w-2xl">A fresh, human-first ecosystem for out-of-home advertising.</p>
+  <a href="#join" class="btn-primary mt-10">Join the Movement</a>
+</section>
 
-  <!-- MISSION -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">Mission</h2>
-    <p>
-      “Fuse local businesses and everyday drivers into a grassroots ad-network
-      that grows community commerce and extra driver income.” :contentReference[oaicite:20]{index=20}
-    </p>
-  </section>
+<!-- MISSION ----------------------------------------------------------->
+<section class="py-16 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-semibold mb-6">Mission</h2>
+  <p>Fuse local businesses and everyday drivers into a grassroots ad-network that grows community commerce and extra driver income.</p>
+</section>
 
-  <!-- PROBLEM & GAP -->
-  <section class="bg-gray-50 py-16 px-6">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Problem &amp; Market Gap</h2>
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      <div>
-        <h3 class="font-medium text-xl mb-2">Market Pain</h3>
-        <ul class="list-disc list-inside space-y-2">
-          <li>“SMBs crave affordable, hyper-local reach; digital CPMs &amp; CAC keep rising.” :contentReference[oaicite:21]{index=21}</li>
-          <li>“Traditional OOH is static, pricey, and data-poor.” :contentReference[oaicite:22]{index=22}</li>
-          <li>“Flyers feel dated; car wraps are permanent.” :contentReference[oaicite:23]{index=23}</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-medium text-xl mb-2">Gap We Fill</h3>
-        <p>
-          “Friction-free, measurable, design-flexible vehicle/window ads anyone can
-          launch in minutes.” :contentReference[oaicite:24]{index=24}
-        </p>
-        <p class="mt-4">
-          <strong>Addressable market:</strong> 1.4 B cars × $25 avg annual QR spend ⇒ $35 B. :contentReference[oaicite:25]{index=25}
-        </p>
-      </div>
+<!-- PROBLEM & GAP ----------------------------------------------------->
+<section class="bg-gray-50 py-16 px-6">
+  <h2 class="text-3xl font-semibold mb-6 text-center">Problem &amp; Market Gap</h2>
+  <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div>
+      <h3 class="font-medium text-xl mb-2">Market Pain</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>SMBs crave affordable, hyper-local reach; digital CPMs &amp; CAC keep rising.</li>
+        <li>Traditional OOH is static, pricey, and data-poor.</li>
+        <li>Flyers feel dated; car wraps are permanent.</li>
+      </ul>
     </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-10 text-center">How QRally Works</h2>
-    <div class="grid md:grid-cols-3 gap-10 text-center">
-      <div>
-        <h3 class="text-xl font-medium mb-2">1. Peel-&amp;-Place QR Skins</h3>
-        <p>“Minimal text, bold color blocks; swap in &lt;30 s.” :contentReference[oaicite:26]{index=26}</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-medium mb-2">2. Lite Driver Profile</h3>
-        <p>Interests &amp; causes influence decal style; social feed shows scans, perks, high-fives. :contentReference[oaicite:27]{index=27}</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-medium mb-2">3. Scan Incentives</h3>
-        <p>Each scan can unlock discounts, giveaways, loyalty points. :contentReference[oaicite:28]{index=28}</p>
-      </div>
+    <div>
+      <h3 class="font-medium text-xl mb-2">Gap We Fill</h3>
+      <p>Friction-free, measurable, design-flexible vehicle/window ads anyone can launch in minutes.</p>
+      <p class="mt-4"><strong>Addressable market:</strong> 1.4 B cars × $25 avg annual QR spend ⇒ $35 B.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- GO-TO-MARKET -->
-  <section class="bg-gray-50 py-16 px-6">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Grass-Roots Go-to-Market (0–6 mo)</h2>
-    <ul class="max-w-3xl mx-auto list-disc list-inside space-y-2">
-      <li>“Cold-call sprint — 25 dials/rep/day targeting 1 000 SMBs.” :contentReference[oaicite:29]{index=29}</li>
-      <li>“Free sign-up + decal kit + $50 ad credit for first 100 merchants.” :contentReference[oaicite:30]{index=30}</li>
-      <li>“Driver magnet — $0.10/scan base + PulsePredict™ surge bonuses.” :contentReference[oaicite:31]{index=31}</li>
-      <li>“Street-festival demo fleet — QR-wrapped cars offer discounts &amp; live analytics.” :contentReference[oaicite:32]{index=32}</li>
-    </ul>
-  </section>
+<!-- HOW IT WORKS ------------------------------------------------------>
+<section class="py-16 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-semibold mb-10 text-center">How QRally Works</h2>
+  <div class="grid md:grid-cols-3 gap-10 text-center">
+    <div>
+      <h3 class="text-xl font-medium mb-2">1. Peel-&amp;-Place QR Skins</h3>
+      <p>Minimal text, bold colour blocks; swap in &lt;30 s.</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-medium mb-2">2. Lite Driver Profile</h3>
+      <p>Interests &amp; causes influence decal style; social feed shows scans, perks, high-fives.</p>
+    </div>
+    <div>
+      <h3 class="text-xl font-medium mb-2">3. Scan Incentives</h3>
+      <p>Each scan can unlock discounts, giveaways, loyalty points.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- CAPITAL PLAN -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6 text-center">Roadmap &amp; Capital Plan</h2>
-    <p class="text-center mb-8">
-      Pre-Seed $1.5 M SAFE → Seed $3.5 M → Series A $5 M.  
-      “35 % Product &amp; ML, 25 % Ops &amp; Inventory, 20 % Sales &amp; Marketing, 12 % Compliance, 8 % Cushion.” :contentReference[oaicite:33]{index=33}
-    </p>
-  </section>
+<!-- GO-TO-MARKET ------------------------------------------------------>
+<section class="bg-gray-50 py-16 px-6">
+  <h2 class="text-3xl font-semibold mb-6 text-center">Grass-Roots Go-to-Market (0–6 mo)</h2>
+  <ul class="max-w-3xl mx-auto list-disc list-inside space-y-2">
+    <li>Cold-call sprint — 25 dials/rep/day targeting 1 000 SMBs.</li>
+    <li>Free sign-up + decal kit + $50 ad credit for first 100 merchants.</li>
+    <li>Driver magnet — $0.10/scan base + PulsePredict™ surge bonuses.</li>
+    <li>Street-festival demo fleet — QR-wrapped cars offer discounts &amp; live analytics.</li>
+  </ul>
+</section>
 
-  <!-- JOIN THE MOVEMENT -->
-  <section id="join" class="bg-blue-700 text-white py-16 px-6 text-center">
-    <h2 class="text-3xl font-semibold mb-4">Join the Movement</h2>
-    <p class="max-w-2xl mx-auto">
-      “QRally turns untapped daily traffic into a living marketplace that lifts neighborhoods and rewards everyone involved.” :contentReference[oaicite:34]{index=34}
-    </p>
-    <p class="mt-4">
-      We’re looking for investors, pilot merchants, and driver-ambassadors.
-    </p>
-    <!-- Optional contact button; link to Formspree later if desired -->
-    <a href="mailto:hello@qrally.ai" class="btn-primary mt-8 inline-block">Email Us</a>
-  </section>
+<!-- CAPITAL PLAN ------------------------------------------------------>
+<section class="py-16 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-semibold mb-6 text-center">Roadmap &amp; Capital Plan</h2>
+  <p class="text-center mb-8">
+    Pre-Seed $1.5 M SAFE → Seed $3.5 M → Series A $5 M.<br>
+    35 % Product &amp; ML, 25 % Ops &amp; Inventory, 20 % Sales &amp; Marketing, 12 % Compliance, 8 % Cushion.
+  </p>
+</section>
 
-  <footer class="bg-gray-900 text-gray-300 text-center py-6">
-    &copy; 2025 QRally · Charleston&nbsp;SC
-  </footer>
+<!-- JOIN THE MOVEMENT ------------------------------------------------->
+<section id="join" class="bg-blue-700 text-white py-16 px-6 text-center">
+  <h2 class="text-3xl font-semibold mb-4">Join the Movement</h2>
+  <p class="max-w-2xl mx-auto">QRally turns untapped daily traffic into a living marketplace that lifts neighbourhoods and rewards everyone involved.</p>
+  <p class="mt-4">We’re looking for investors, pilot merchants, and driver-ambassadors.</p>
+  <a href="mailto:hello@qrally.ai" class="btn-primary mt-8 inline-block">Email Us</a>
+</section>
+
+<footer class="bg-gray-900 text-gray-300 text-center py-6">
+  &copy; 2025 QRally · Charleston&nbsp;SC
+</footer>
+
 </body>
 </html>
 
